@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  onIntervalFired(firedNumber: number) {
+    console.log('test');
+    console.log(firedNumber);
+  }
+  constructor() {
+    console.log('constructor called!');
+  }
 }
