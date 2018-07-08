@@ -15,7 +15,7 @@
             {{odd}}
           </li>
         </div>
-        <div *ngIf="onlyOdd == false">
+        <div *appUnless="onlyOdd">
           <li class="list-group-item"
               [ngClass]="{odd: even % 2 !== 0}"
               [ngStyle]="{backgroundColor: even % 2 !== 0 ? 'yellow' : 'transparent'}"
