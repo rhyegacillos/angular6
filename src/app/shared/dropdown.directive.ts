@@ -5,7 +5,7 @@ import {Directive, ElementRef, HostBinding, HostListener} from '@angular/core';
 })
 export class DropdownDirective {
   private dropdownParentEl = this.elementRef.nativeElement.closest('.dropdown');
-  private isOpen:boolean;
+  private isOpen: boolean;
   constructor(private elementRef: ElementRef) { }
 
 //  @HostBinding('class.show') isOpen = false;
