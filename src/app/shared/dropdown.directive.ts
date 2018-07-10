@@ -8,6 +8,7 @@ export class DropdownDirective {
   private isOpen: boolean;
   constructor(private elementRef: ElementRef) { }
 
+
 //  @HostBinding('class.show') isOpen = false;
 
   @HostListener('click') toggleOpen() {
