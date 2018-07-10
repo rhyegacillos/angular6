@@ -3,10 +3,14 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import {FormsModule} from '@angular/forms';
+import { NewAccountComponent } from './new-account/new-account.component';
+import { AccountComponent } from './account/account.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NewAccountComponent,
+    AccountComponent
   ],
   imports: [
     BrowserModule,
