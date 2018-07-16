@@ -17,7 +17,7 @@ export class RecipeService {
       [new Ingredient('buns', 5), new Ingredient('chicken', 1)] )
   ];
 
-  constructor(private slService: ShoppingListService){}
+  constructor(private slService: ShoppingListService) {}
 
   getRecipes() {
     return this.recipes.slice();
