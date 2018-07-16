@@ -1,3 +1,18 @@
-<p>
-  servers works!
-</p>
+<div class="row mt-lg-3">
+  <div class="col-sm-12 col-4">
+    <div class="list-group">
+      <a href=""
+         class="list-group-item"
+         *ngFor="let server of servers"> {{server.name}}
+      </a>
+    </div>
+  </div>
+  <div class="col-sm-12 col-4">
+    <button class="btn btn-primary" (click)="onReload()">
+      Reload Page
+    </button>
+    <app-edit-server></app-edit-server>
+    <hr>
+    <app-server></app-server>
+  </div>
+</div>
