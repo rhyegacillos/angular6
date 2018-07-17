@@ -9,10 +9,13 @@ import { UsersComponent } from './users/users.component';
 import {RouterModule, Routes} from '@angular/router';
 import { ServerComponent } from './servers/server/server.component';
 import {EditServerComponent} from './servers/edit-server/edit-server.component';
+import { UserComponent } from './users/user/user.component';
 
 const appRoutes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'servers', component: ServersComponent},
+  {path: 'servers/:id/edit', component: ServersComponent},
+  {path: 'servers/:id', component: ServerComponent},
   {path: 'users', component: UsersComponent},
   {path: 'users/:id/:name', component: UsersComponent}
 ];
@@ -24,7 +27,8 @@ const appRoutes: Routes = [
     ServersComponent,
     UsersComponent,
     EditServerComponent,
-    ServerComponent
+    ServerComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,
