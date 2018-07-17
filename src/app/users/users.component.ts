@@ -11,7 +11,7 @@ export class UsersComponent implements OnInit {
     {id: 1, name: 'Max'},
     {id: 2, name: 'Anna'},
     {id: 3, name: 'Chris'}
-  ]
+  ];
 
   user: {id: number, name: string};
 
@@ -29,5 +29,4 @@ export class UsersComponent implements OnInit {
       }
     );
   }
-
 }
