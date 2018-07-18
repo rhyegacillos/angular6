@@ -26,7 +26,6 @@ export class EditServerComponent implements OnInit {
     this.server = this.serverService.getServer(1);
     this.serverName = this.server.name;
     this.serverStatus = this.server.status;
-    console.log('allowEdit: ' + this.allowEdit);
   }
 
   onUpdateServer() {
