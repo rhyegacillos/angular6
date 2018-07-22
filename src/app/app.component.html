@@ -34,7 +34,17 @@
                  [value]="gender">
           <label [for]="i" class="form-check-label">{{gender}}</label>
         </div>
-        <span class="form-text text-danger"
+        <div formArrayName="hobbies" class="mb-sm-2">
+          <h4>Your Hobbies</h4>
+          <button class="btn btn-outline-info mb-sm-2"
+                  type="button"
+                  (click)="onAddHobby()">Add Hobby</button>
+          <div class="form-group"
+               *ngFor="let hobbyControl of signupForm.get('hobbies').controls; let i = index">
+            <input type="text" class="form-control" [formControlName]="i">
+          </div>
+        </div>
+        <span class="form-text text-danger mb-sm-3"
               *ngIf="!signupForm.valid && signupForm.touched">
             Please enter a valid data!</span>
         <button
