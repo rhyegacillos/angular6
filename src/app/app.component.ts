@@ -49,6 +49,8 @@ export class AppComponent {
     this.user.secretQuestion = this.signUpForm.value.secret;
     this.user.answer = this.signUpForm.value.answer;
     this.user.gender = this.signUpForm.value.gender;
+
+    this.signUpForm.reset();
   }
 
   getName(i: number) {
