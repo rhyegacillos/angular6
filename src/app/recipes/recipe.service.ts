@@ -26,8 +26,8 @@ export class RecipeService {
     return this.recipes[id];
   }
 
-  // addIngredientToShoppingList(ingredients: Ingredient[]) {
-  //   this.slService.addIngredients(ingredients);
-  // }
+  addIngredientToShoppingList(ingredients: Ingredient[]) {
+    this.slService.addIngredients(ingredients);
+  }
 
 }
