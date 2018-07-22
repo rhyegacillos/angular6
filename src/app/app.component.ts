@@ -7,7 +7,7 @@ import {NgForm} from '@angular/forms';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  @ViewChild('f') signUpForm;
+  @ViewChild('f') signUpForm: NgForm;
   defaultQuestion = 'pet';
   defaultGender = 'male';
   answer: '';
@@ -17,11 +17,21 @@ export class AppComponent {
 
   suggestUsername() {
     const suggestedName = 'Superuser';
+    // this.signUpForm.setValue({
+    //   userData: {
+    //     username: suggestedName,
+    //     email: '',
+    //   },
+    //   secret: 'pet',
+    //   questionAnswer: '',
+    //   gender: 'male'
+    // });
+    this.signUpForm.form.patchValue({
+      userData: {
+        username: suggestedName
+      }
+    });
   }
-  //
-  // onSubmit(form: NgForm) {
-  //   console.log(form);
-  // }
 
   onSubmit() {
     console.log(this.signUpForm);
