@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row mt-lg-4">
     <div class="col-sm-8 offset-sm-2">
-      <form [formGroup]="signupForm">
+      <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
         <div class="form-group">
           <label for="username">Username</label>
           <input
@@ -16,6 +16,7 @@
             type="text"
             id="email"
             formControlName="email"
+
             class="form-control">
         </div>
         <div class="form-check mb-sm-2" *ngFor="let gender of genders, let i = index">
@@ -28,8 +29,7 @@
         </div>
         <button
           class="btn btn-primary"
-          type="submit"
-          (click)="onSubmit()">Submit
+          type="submit" >Submit
         </button>
       </form>
     </div>
