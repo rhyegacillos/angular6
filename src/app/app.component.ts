@@ -9,7 +9,12 @@ import {NgForm} from '@angular/forms';
 export class AppComponent {
   @ViewChild('f') signUpForm;
   defaultQuestion = 'pet';
+  defaultGender = 'male';
   answer: '';
+  genders = ['male', 'female'];
+  index: number;
+  id = 'radio';
+
   suggestUsername() {
     const suggestedName = 'Superuser';
   }
@@ -20,5 +25,9 @@ export class AppComponent {
 
   onSubmit() {
     console.log(this.signUpForm);
+  }
+
+  getName(i: number) {
+    return this.id + i;
   }
 }
