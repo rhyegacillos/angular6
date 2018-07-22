@@ -6,6 +6,7 @@ import {FormsModule} from '@angular/forms';
 import { UserComponent } from './user/user.component';
 import { HomeComponent } from './home/home.component';
 import {AppRoutingModule} from './app-routing.module';
+import {UsersService} from './users.service';
 
 @NgModule({
   declarations: [
