@@ -5,7 +5,7 @@
         <div class="col-sm-12">
           <button class="btn btn-success mr-sm-2"
                   [disabled]="!recipeForm.valid">Save</button>
-          <button class="btn btn-danger">Cancel</button>
+          <button class="btn btn-danger" (click)="onCancel()">Cancel</button>
         </div>
       </div>
       <div class="row">
