@@ -33,6 +33,8 @@ export class AppComponent {
     },
   ];
 
+  filteredStatus: string;
+
   getStatusClasses(server: {instanceType: string,
                             name: string,
                             status: string,
