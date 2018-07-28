@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
 import {ServersService} from './servers.service';
-import {Response} from '@angular/http';
-import {a} from '@angular/core/src/render3';
 
 @Component({
   selector: 'app-root',
