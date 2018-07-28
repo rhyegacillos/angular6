@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import {Headers, Http, Response} from '@angular/http';
-import {catchError, map} from 'rxjs/operators';
+import {catchError, map, map} from 'rxjs/operators';
 import {throwError} from 'rxjs';
 
 @Injectable({
@@ -21,7 +21,7 @@ export class ServersService {
   }
 
   getServers() {
-    return this.http.get('https://angular-project-3ff3f.firebaseio.com/data')
+    return this.http.get('https://angular-project-3ff3f.firebaseio.com/data.json')
       .pipe(
         map(
         (response: Response) => {
@@ -37,5 +37,16 @@ export class ServersService {
             return throwError('Something went wrong');
           }
         ));
+  }
+
+  getAppName() {
+    return this.http.get('https://angular-project-3ff3f.firebaseio.com/AppName.json')
+      .pipe(
+        map(
+          (response: Response) => {
+            return response.json();
+          }
+        )
+      );
   }
 }
