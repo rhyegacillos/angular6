@@ -28,4 +28,9 @@ export class HeaderComponent {
     this.dataStorageService.getRecipes().subscribe();
     this.router.navigate(['/'], {relativeTo: this.route});
   }
+
+  onLogout() {
+    this.authService.logout();
+    this.router.navigate(['../signin'], {relativeTo: this.route});
+  }
 }

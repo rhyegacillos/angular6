@@ -20,7 +20,7 @@ export class AuthService {
   signinUser(email: string, password: string) {
     firebase.auth().signInWithEmailAndPassword(email, password)
       .then(
-        respose => {
+        response => {
           firebase.auth().currentUser.getIdToken()
             .then(
               (token: string) => this.token = token
@@ -41,5 +41,10 @@ export class AuthService {
 
   isAuthenticated() {
     return this.token != null;
+  }
+
+  logout() {
+    firebase.auth().signOut();
+    this.token = null;
   }
 }

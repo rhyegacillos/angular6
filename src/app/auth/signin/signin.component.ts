@@ -10,9 +10,7 @@ import {ActivatedRoute, Router} from '@angular/router';
 })
 export class SigninComponent implements OnInit {
 
-  constructor(private authService: AuthService,
-              private route: ActivatedRoute,
-              private router: Router) { }
+  constructor(private authService: AuthService) { }
 
   ngOnInit() {
   }
@@ -20,12 +18,8 @@ export class SigninComponent implements OnInit {
   onSignin(form: NgForm) {
     const email = form.value.email;
     const password = form.value.password;
+
     this.authService.signinUser(email, password);
-
-    if (this.authService.isAuthenticated()) {
-      this.router.navigate(['../'], {relativeTo: this.route});
-    }
-
   }
 
 }
