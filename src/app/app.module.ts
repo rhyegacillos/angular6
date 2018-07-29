@@ -13,6 +13,7 @@ import {RecipeService} from './recipes/recipe.service';
 import {HttpModule} from '@angular/http';
 import {SignupComponent} from './auth/signup/signup.component';
 import {SigninComponent} from './auth/signin/signin.component';
+import {RecipeModule} from './recipes/recipe.module';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import {SigninComponent} from './auth/signin/signin.component';
     BrowserModule,
     FormsModule,
     AppRoutingModule,
+    RecipeModule,
     HttpModule
   ],
   providers: [ShoppingListService, RecipeService],
