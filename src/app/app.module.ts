@@ -7,24 +7,26 @@ import {ShoppingListService} from './shopping-list/shopping-list.service';
 import {AppRoutingModule} from './app-routing.module';
 import {RecipeService} from './recipes/recipe.service';
 import {HttpModule} from '@angular/http';
-import {RecipeModule} from './recipes/recipe.module';
 import {SharedModule} from './shared/shared.module';
 import {ShoppingListModule} from './shopping-list/shopping-list.module';
 import {AuthModule} from './auth/auth.module';
+import { HomeComponent } from './home/home.component';
+import {RecipesModule} from './recipes/recipes.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent
+    HeaderComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    RecipeModule,
+    RecipesModule,
     SharedModule,
     ShoppingListModule,
     AuthModule,
-    HttpModule
+    HttpModule,
+    AppRoutingModule
   ],
   providers: [ShoppingListService, RecipeService],
   bootstrap: [AppComponent]
