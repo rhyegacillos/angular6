@@ -1,8 +1,8 @@
 import {Component} from '@angular/core';
-import {DataStorageService} from '../shared/data-storage.service';
+import {DataStorageService} from '../../shared/data-storage.service';
 import {Response} from '@angular/http';
 import {ActivatedRoute, Router} from '@angular/router';
-import {AuthService} from '../auth/auth.service';
+import {AuthService} from '../../auth/auth.service';
 
 @Component({
   selector: 'app-header',
@@ -14,7 +14,7 @@ export class HeaderComponent {
   constructor(private dataStorageService: DataStorageService,
               private router: Router,
               private route: ActivatedRoute,
-              private authService: AuthService) {}
+              public authService: AuthService) {}
 
   onSaveData() {
     this.dataStorageService.storageRecipes().subscribe(
