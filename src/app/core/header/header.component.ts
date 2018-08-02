@@ -1,6 +1,5 @@
 import {Component} from '@angular/core';
 import {DataStorageService} from '../../shared/data-storage.service';
-import {Response} from '@angular/http';
 import {ActivatedRoute, Router} from '@angular/router';
 import {AuthService} from '../../auth/auth.service';
 
@@ -18,7 +17,7 @@ export class HeaderComponent {
 
   onSaveData() {
     this.dataStorageService.storageRecipes().subscribe(
-      (response: Response) => {
+      (response) => {
         console.log(response);
       }
     );

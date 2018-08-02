@@ -18,7 +18,9 @@ export class DataStorageService {
 
   storageRecipes() {
     const token = this.authService.getToken();
-    return this.http.put('https://recipe-db-8ca5b.firebaseio.com/recipe.json?auth=' + token, this.recipeService.getRecipes());
+    return this.http.put('https://recipe-db-8ca5b.firebaseio.com/recipe.json?auth=' + token, this.recipeService.getRecipes(), {
+      observe: 'body'
+    });
   }
 
   getRecipes() {
