@@ -9,6 +9,7 @@ import {ShoppingListModule} from './shopping-list/shopping-list.module';
 import {AuthModule} from './auth/auth.module';
 import {RecipesModule} from './recipes/recipes.module';
 import {CoreModule} from './core/core. module';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -17,12 +18,13 @@ import {CoreModule} from './core/core. module';
   imports: [
     BrowserModule,
     RecipesModule,
+    AppRoutingModule,
     SharedModule,
     ShoppingListModule,
     AuthModule,
-    HttpModule,
-    CoreModule,
-    AppRoutingModule
+    HttpClientModule,
+    CoreModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

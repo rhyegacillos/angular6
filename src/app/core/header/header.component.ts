@@ -26,7 +26,7 @@ export class HeaderComponent {
 
   onFetchData() {
     this.dataStorageService.getRecipes().subscribe();
-    this.router.navigate(['/'], {relativeTo: this.route});
+    this.router.navigate(['/recipes'], {relativeTo: this.route});
   }
 
   onLogout() {
