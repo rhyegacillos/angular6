@@ -16,9 +16,6 @@ export class ShoppingListComponent implements OnInit {
 
   ngOnInit() {
     this.shoppingListState = this.store.select('shoppingList');
-    // this.slService.ingredientChanged.subscribe((ingredients: Ingredient[]) => {
-    //   this.ingredients = ingredients;
-    // });
   }
 
   onEditItem(index: number) {
