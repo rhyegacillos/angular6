@@ -10,7 +10,7 @@ import {RecipesModule} from './recipes/recipes.module';
 import {CoreModule} from './core/core. module';
 import {HttpClientModule} from '@angular/common/http';
 import {StoreModule} from '@ngrx/store';
-import {shoppingListReducer} from './shopping-list/ngrx/shopping-list-reducers';
+import {reducers} from './store/app.reducer';
 
 @NgModule({
   declarations: [
@@ -25,8 +25,7 @@ import {shoppingListReducer} from './shopping-list/ngrx/shopping-list-reducers';
     AuthModule,
     HttpClientModule,
     CoreModule,
-    StoreModule.forRoot({shoppingList: shoppingListReducer})
-
+    StoreModule.forRoot(reducers)
   ],
   providers: [],
   bootstrap: [AppComponent]
