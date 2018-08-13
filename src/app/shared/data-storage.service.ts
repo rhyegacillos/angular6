@@ -1,10 +1,8 @@
 import {Injectable} from '@angular/core';
-import {Http, Response} from '@angular/http';
 import {RecipeService} from '../recipes/recipe.service';
 import {Recipe} from '../recipes/recipe.model';
 import {map} from 'rxjs/operators';
-import {AuthService} from '../auth/auth.service';
-import {HttpClient, HttpHeaders, HttpParams, HttpRequest} from '@angular/common/http';
+import {HttpClient, HttpRequest} from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -12,8 +10,7 @@ import {HttpClient, HttpHeaders, HttpParams, HttpRequest} from '@angular/common/
 export class DataStorageService {
 
   constructor(private http: HttpClient,
-              private recipeService: RecipeService,
-              private authService: AuthService) {
+              private recipeService: RecipeService) {
   }
 
   storageRecipes() {
